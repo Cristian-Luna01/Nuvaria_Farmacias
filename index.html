@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvaria Farmacia | Medicamentos Genéricos y Ahorro</title>
+    <!-- Favicon / Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="logof.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="logof.png" alt="Logo Nuvaria Farmacia" class="logo-img">
+                <div class="logo-text">
+                    <h1>Nuvaria</h1>
+                    <small>Farmacia</small>
+                </div>
+            </div>
+            
+            <button id="menu-toggle" class="menu-toggle">
+                <span class="material-icons-round">menu</span>
+            </button>
+
+            <nav id="main-nav" class="main-nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Buscar Medicamento</a>
+                <a href="#por-que-genericos">¿Por qué Genéricos?</a>
+                <a href="#nosotros">Conócenos</a>
+                <a href="#contacto">Ubicación</a>
+                <a href="#" id="share-header-btn" style="color: var(--accent-color); font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+                    <span class="material-icons-round" style="font-size: 18px;">share</span> Compartir
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="inicio" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h2>Encuentra tus medicamentos genéricos al mejor precio</h2>
+                <p>Ofrecemos la misma calidad, seguridad y eficacia que las marcas de patente, pero con un ahorro de hasta el 75%. ¡Consulta existencias hoy mismo!</p>
+                <div class="hero-actions">
+                    <a href="#catalogo" class="btn btn-primary">
+                        <span class="material-icons-round">search</span> Consultar Catálogo
+                    </a>
+                    <a href="https://wa.me/5217791063722?text=Hola,%20quisiera%20consultar%20la%20existencia%20de%20un%20medicamento%20en%20Nuvaria%20Farmacia" target="_blank" class="btn btn-whatsapp">
+                        <span class="material-icons-round">chat</span> Preguntar por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-badge-card">
+                <div class="stat-card">
+                    <span class="material-icons-round text-accent">verified</span>
+                    <h3>Misma Eficacia</h3>
+                    <p>Mismo principio activo, idéntico efecto terapéutico.</p>
+                </div>
+                <div class="stat-card">
+                    <span class="material-icons-round text-accent">savings</span>
+                    <h3>Máximo Ahorro</h3>
+                    <p>Precios justos sin pagar de más por la marca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. BUSCADOR DE MEDICAMENTOS -->
+    <section id="catalogo" class="catalog-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Buscador de Medicamentos</h2>
+                <p>Escribe el nombre del medicamento o el principio activo para verificar si lo manejamos en nuestro inventario.</p>
+            </div>
+
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <span class="material-icons-round search-icon">search</span>
+                    <input type="text" id="search-input" placeholder="Ej. Paracetamol, Omeprazol, Amoxicilina, Gasas...">
+                    <button id="clear-search" class="clear-btn"><span class="material-icons-round">close</span></button>
+                </div>
+            </div>
+
+            <div id="results-container" class="results-container">
+                <div class="initial-message">
+                    <span class="material-icons-round">manage_search</span>
+                    <p>Comienza a escribir para buscar entre nuestros más de 6,000 productos disponibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN PROMOCIONES (OCULTA TEMPORALMENTE DESDE CSS) -->
+    <section id="promociones" class="promo-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ofertas y Promociones Especiales</h2>
+                <p>Aprovecha los descuentos exclusivos de la semana en nuestra sucursal.</p>
+            </div>
+            <div class="promo-viewport">
+                <button id="promo-prev" class="promo-nav-btn prev">
+                    <span class="material-icons-round">chevron_left</span>
+                </button>
+                
+                <div id="promos-container" class="promos-grid"></div>
+                
+                <button id="promo-next" class="promo-nav-btn next">
+                    <span class="material-icons-round">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN INFORMATIVA (POR QUÉ GENÉRICOS + SERVICIO LOCAL) -->
+    <section id="por-que-genericos" class="info-section">
+        <div class="container info-grid">
+            <div class="info-text">
+                <h2>¿Por qué elegir Medicamentos Genéricos?</h2>
+                <p>Un medicamento genérico es una opción inteligente y totalmente segura para cuidar tu salud sin descuidar tu economía. Contiene <strong>exactamente el mismo principio activo, la misma dosis y la misma forma farmacéutica</strong> que el medicamento de patente (el de marca original). Esto significa que actúan de la misma manera en tu cuerpo y ofrecen el mismo efecto terapéutico.</p>
+                <p>La única diferencia real radica en el diseño del empaque, el nombre comercial que le asigna cada laboratorio y, por supuesto, el costo final, llegando a representar un <strong>ahorro de hasta el 75%</strong> en tu receta médica diaria.</p>
+                
+                <div class="info-features">
+                    <div class="feature-item">
+                        <span class="material-icons-round check-icon">gpp_good</span>
+                        <div>
+                            <h4>Calidad Estrictamente Regulada</h4>
+                            <p>En México, todos los genéricos de farmacia autorizados pasan por rigurosas pruebas de bioequivalencia e intercambiabilidad avaladas por las autoridades de salud. Esto garantiza científicamente que se absorben y curan con la misma velocidad, potencia y seguridad que el fármaco de marca.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="material-icons-round check-icon">payments</span>
+                        <div>
+                            <h4>¿Por qué el precio es tan bajo?</h4>
+                            <p>No se debe a que la materia prima sea de menor calidad. Lo que pasa es que los laboratorios que fabrican genéricos no tienen que invertir millones de dólares en la investigación médica inicial, desarrollo de la fórmula desde cero, ni en costosas campañas publicitarias masivas en medios; ese enorme ahorro de producción se transfiere directamente a tu bolsillo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="callout-box">
+                <h3><span class="material-icons-round">local_shipping</span> Servicio Local y Entregas</h3>
+                <p class="callout-subtitle">Queremos darte la mejor atención. Conoce nuestras modalidades de servicio:</p>
+                <ul class="service-list">
+                    <li>
+                        <span class="material-icons-round">directions_walk</span>
+                        <strong>Servicio a Domicilio a Pie:</strong> Disponible exclusivamente para zonas muy cercanas al establecimiento. Consulta cobertura exacta por WhatsApp.
+                    </li>
+                    <li>
+                        <span class="material-icons-round">shopping_bag</span>
+                        <strong>Modalidad Pide y Recoge:</strong> ¡Haz tu pedido por WhatsApp, nosotros lo separamos y tú solo pasas a pagar sin hacer filas!
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN: CONÓCENOS (QUIÉNES SOMOS, MISIÓN, VISIÓN Y VALORES) -->
+    <section id="nosotros" class="about-section">
+        <div class="container">
+            <div class="about-main-grid">
+                <div class="about-card">
+                    <!-- Icono "groups" añadido aquí -->
+                    <h2><span class="material-icons-round text-accent">groups</span> ¿Quiénes Somos?</h2>
+                    <p>En Nuvaria, nuestro compromiso es tu bienestar. Somos una farmacia diseñada para adaptarse a las necesidades del mundo actual, offering un servicio que combina calidez humana, rapidez y la máxima seguridad en cada uno de tus medicamentos.</p>
+                </div>
+                <div class="meaning-box">
+                    <!-- Icono "local_pharmacy" añadido aquí -->
+                    <h3><span class="material-icons-round text-accent">local_pharmacy</span> ¿Qué significa Nuvaria?</h3>
+                    <p>Nuestro nombre nace de una visión clara: renovar el cuidado de la salud. Fusionamos la raíz <strong>"Nuv-"</strong> (de Nueva), que representa la innovación, la frescura y una mentalidad moderna para atenderte, con el sufijo tradicional <strong>"-aria"</strong>, que evoca la seriedad, el respaldo y la formalidad de las grandes instituciones de salud (como la botica o la herbolaria).</p>
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--primary-dark);">En pocas palabras, Nuvaria es el equilibrio perfecto entre la evolución tecnológica y la confianza médica de siempre.</p>
+                </div>
+            </div>
+
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <h3><span class="material-icons-round text-accent">assignment_turned_in</span> Nuestra Misión</h3>
+                    <p>Proveer a nuestra comunidad un acceso rápido, seguro y confiable a medicamentos y productos para el cuidado de la salud. Nos dedicamos a proteger el bienestar de cada cliente a través de una atención profesional, precios justos y un servicio cálido que marque la diferencia en su día a día.</p>
+                </div>
+                <div class="mv-card">
+                    <h3><span class="material-icons-round text-accent">visibility</span> Nuestra Visión</h3>
+                    <p>Consolidarnos como la farmacia de confianza líder en nuestra región y en el entorno digital, siendo reconocidos por la excelencia de nuestro servicio, la innovación en la atención al cliente y el compromiso inquebrantable con la salud y la tranquilidad de las familias que nos eligen.</p>
+                </div>
+            </div>
+
+            <div class="values-section">
+                <div class="values-title">
+                    <h2>Los Valores que nos Mueven</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <span class="material-icons-round">verified_user</span>
+                        <h4>Confianza</h4>
+                        <p>Garantizamos el manejo seguro y profesional de todos nuestros productos farmacéuticos.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="material-icons-round">favorite</span>
+                        <h4>Empatía</h4>
+                        <p>Escuchamos y atendemos a cada persona con la calidez y el respeto que su salud merece.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="material-icons-round">psychology</span>
+                        <h4>Innovación</h4>
+                        <p>Buscamos formas constantes de mejorar tu experiencia, facilitando el acceso a lo que necesitas tanto en tienda como en línea.</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="material-icons-round">gpp_good</span>
+                        <h4>Integridad</h4>
+                        <p>Operamos con absoluta transparencia, honestidad y apego a las normas de salud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. UBICACIÓN Y CONTACTO -->
+    <section id="contacto" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Visítanos o Contáctanos</h2>
+                <br><br>
+                <p>Estamos para servirte. Ven directamente a la sucursal o escríbenos para cualquier duda.</p>
+                <br>
+                <div class="contact-details">
+                    <div class="detail-row">
+                        <span class="material-icons-round">place</span>
+                        <p><strong>Ubicación:</strong> Tizayuca, Hidalgo, México.</p>
+                    </div>
+                    <div class="detail-row">
+                        <span class="material-icons-round">schedule</span>
+                        <p><strong>Horario:</strong> Lunes a Domingo de 8:00 AM a 8:00 PM</p>
+                    </div>
+                </div>
+                <br>
+                <a href="https://maps.google.com/?q=Farmacia+La+P%C3%ADldora+Tizayuca" target="_blank" class="btn btn-secondary">
+                    <span class="material-icons-round">map</span> Ver en Google Maps / ¿Cómo llegar?
+                </a>
+            </div>
+            <div class="map-placeholder">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.179611187454!2d-98.93359902407819!3d19.874636281501378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1910063861b67%3A0xd0e89163e1b26fab!2sFarmacia%20La%20P%C3%ADldora!5e0!3m2!1ses-419!2smx!4v1781627496276!5m2!1ses-419!2smx" 
+                    width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <div id="floating-cart" class="floating-cart">
+        <a id="floating-cart-btn" href="#" target="_blank" class="cart-fab">
+            <div class="cart-icon-wrapper">
+                <span class="material-icons-round">shopping_bag</span>
+                <span id="cart-count" class="cart-badge">0</span>
+            </div>
+            <span class="cart-text">Preguntar por mi lista</span>
+        </a>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <p id="copyright-text">© 2026 Nuvaria Farmacia. Todos los derechos reservados.</p>
+            <button id="share-website-btn" class="btn btn-share">
+                <span class="material-icons-round">share</span> Compartir esta página con un vecino
+            </button>
+        </div>
+    </footer>
+
+    <script src="productos.js"></script>
+    <script src="promociones.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
