@@ -1,6 +1,5 @@
-/* =========================================================================
-   🌐 CONFIGURACIÓN GLOBAL Y EFECTO DE DESPLAZAMIENTO SUAVE
-   ========================================================================= */
+   /* CONFIGURACIÓN GLOBAL Y EFECTO DE DESPLAZAMIENTO SUAVE */
+    
 html {
     scroll-behavior: smooth; /* Hace que la página se deslice suavemente */
     scroll-padding-top: 90px; /* Corrige el salto para que el menú fijo no tape los títulos */
@@ -396,9 +395,8 @@ body {
 .service-list li:not(:last-child) { margin-bottom: 28px; }
 .service-list li span { position: absolute; left: 0; top: 2px; font-size: 20px; color: var(--accent-color); }
 
-/* ==========================================
-   🎨 ESTILOS DE LA SECCIÓN: NOSOTROS
-   ========================================== */
+/*  ESTILOS DE LA SECCIÓN: NOSOTROS*/
+
 .about-section {
     padding: 60px 0;
     background-color: var(--card-background);
@@ -500,9 +498,9 @@ body {
 .main-footer { background-color: var(--secondary-color); color: white; padding: 15px 0; font-size: 13px; }
 .footer-flex { display: flex; justify-content: space-between; align-items: center; }
 
-/* ==========================================
-   📱 MEDIA QUERIES RESPONSIVAS CELULARES
-   ========================================== */
+/* MEDIA QUERIES RESPONSIVAS CELULARES */
+
+
 @media (max-width: 768px) {
     .menu-toggle { display: block; position: relative; z-index: 110; }
     

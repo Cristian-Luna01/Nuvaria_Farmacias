@@ -187,9 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
         iniciarTemporizadorCarrusel();
     }
 
-    // =========================================================================
-    // 🔍 BUSCADOR OPTIMIZADO CON TEXTOS ESTANDARIZADOS Y SALTO DE LÍNEA
-    // =========================================================================
+    // BUSCADOR OPTIMIZADO CON TEXTOS ESTANDARIZADOS Y SALTO DE LÍNEA
+
+
     function buscarMedicamentos(query) {
         const palabras = query.split(' ');
         const resultados = INVENTARIO_MEDICAMENTOS.filter(p => palabras.every(pal => p.toLowerCase().includes(pal)));
@@ -252,9 +252,9 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarInterfazCarrito();
     }
 
-    // ==========================================
     // LÓGICA DE TRÁFICO DE MENÚS Y COMPARTIR
-    // ==========================================
+
+
     window.addEventListener('resize', () => {
         const tarjetas = promosContainer.querySelectorAll('.promo-card');
         if (tarjetas.length > 0) calcularDesplazamientoCarrusel(tarjetas, true);

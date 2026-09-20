@@ -1,4 +1,4 @@
-// 📊 BASE DE DATOS ESTRUCTURADA DE PROMOCIONES (EDITABLE)
+// BASE DE DATOS ESTRUCTURADA DE PROMOCIONES (EDITABLE)
 // Modifica únicamente este archivo para cambiar, quitar o poner ofertas de Nuvaria Farmacia
 const PRODUCTOS_PROMOCION = [
     {
